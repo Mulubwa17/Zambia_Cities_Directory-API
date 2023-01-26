@@ -1,0 +1,125 @@
+//////////
+PROVINCE
+/////////
+
+####
+POST http://localhost:4000/api/v1/Province/new_province
+Content-Type: application/json
+
+{
+    "name": "province name",
+    "capital": "province capital here"
+}
+
+####
+GET http://localhost:4000/api/v1/Province/profile/:provinceId
+
+####
+GET http://localhost:4000/api/v1/Province/profile_name/:provinceName
+
+####
+GET http://localhost:4000/api/v1/Province/list
+
+####
+PUT http://localhost:4000/api/v1/Province/edit_province/:provinceId
+
+####
+DELETE  http://localhost:4000/api/v1/Province/remove_province/:provinceId
+
+
+///////////
+DISTRICT
+//////////
+
+####
+POST http://localhost:4000/api/v1/Province/district/new_district
+Content-Type: application/json
+
+{
+    "province": "province Id here",
+    "name": "district name",
+    "population": "number here"
+}
+
+####
+GET http://localhost:4000/api/v1/Province/district/profile/:districtId
+
+####
+GET http://localhost:4000/api/v1/Province/district/profile_name/:districtName
+
+####
+GET http://localhost:4000/api/v1/Province/district/list
+
+####
+GET http://localhost:4000/api/v1/Province/district/list_province/:provinceId
+
+####
+GET http://localhost:4000/api/v1/Province/district/list_province_name/:provinceName
+
+####
+PUT http://localhost:4000/api/v1/Province/district/edit_district/:districtId
+
+####
+DELETE  http://localhost:4000/api/v1/Province/district/remove_district/:districtId
+
+////////// 
+ADMIN
+//////////
+
+POST http://localhost:3000/api/v1/Admin/new_admin Content-Type: application/json
+
+{ "firstName":"Admin", "lastName": "Test","email":"admin1@test.com", "gender": "Male", "password":"1111111",}
+
+### 
+GET http://localhost:3000/api/v1/Admin/view_admin/:adminId
+
+### 
+GET http://localhost:3000/api/v1/Admin/view_admins
+
+
+### 
+PUT http://localhost:3000/api/v1/Admin/edit_admin/:adminId 
+Content-Type: application/json
+
+{ "email": "l@test.com" }
+
+### 
+DELETE http://localhost:3000/api/v1/Admin/remove_admin/:adminId
+
+
+//////////
+AUTH
+/////////
+
+### 
+POST http://localhost:3000/api/v1/Auth/set_password 
+Content-Type: application/json
+
+{ "email":"admin1@test.com","password":"1234678" }
+
+### 
+POST http://localhost:3000/api/v1/Auth/login 
+Content-Type: application/json
+
+{ "email":"admin1@test.com","password":"1234678" }
+
+### 
+POST http://localhost:3000/api/v1/Auth/forgot_password 
+Content-Type: application/json
+
+{
+"email": "mulubwac@gmail.com"
+}
+
+### 
+PATCH http://localhost:3000/api/v1/Auth/reset_password 
+Content-Type: application/json
+
+{
+"resetPin": "reset pin in email", "password": "new password"
+}
+
+
+
+
+
