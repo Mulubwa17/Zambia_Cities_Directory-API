@@ -9,7 +9,9 @@ yarn dev : to run the dev server in Typescript
 yarn build : to build the production server and transpile to JavaScript
 yarn start : to run the production server
 
-All api resquests are in the /requests.rest file
+All api resquests are in the [link](/requests.rest) file
+
+All the current seeded data can be found in [link](/src/utils/provinceData.ts) file
 
 To contribute:
 
