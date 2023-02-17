@@ -41,7 +41,7 @@ app.use("/api/v1/Admin", admin_1.adminRoutes);
 app.use("/api/v1/Auth", auth_1.authRoutes);
 app.use("/api/v1/Province", province_1.provinceRoutes);
 app.use("/api/v1/District", district_1.districtRoutes);
-app.get("/api/v1/health", (req, res) => {
+app.get("/", (req, res) => {
     logger_1.default.error("This is an error log");
     logger_1.default.warn("This is a warn log");
     logger_1.default.info("This is a info log");
